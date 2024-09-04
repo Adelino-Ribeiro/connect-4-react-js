@@ -1,0 +1,2 @@
+.gameBoard{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr 1fr;left:50%;margin-left:-200px;padding:20px;position:absolute;top:20%}.gameCircle{border:1px solid #000;border-radius:50%;height:70px;margin:10px;width:70px}.player-0{background-color:#fff}.player-1{background-color:red}.player-2{background-color:blue}
+/*# sourceMappingURL=main.c0c2a17f.css.map*/
