@@ -1,0 +1,24 @@
+.gameBoard {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    top: 20%;
+}
+
+.gameCircle {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.player-0 { background-color: white; }
+
+.player-1 { background-color: red; }
+
+.player-2 { background-color: blue; }
