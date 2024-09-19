@@ -2,7 +2,6 @@ import React from "react";
 import "../Game.css";
 
 const GameCircle = ({ id, children, onCircleClicked, className }) => {
-
   // const color = (id % 2 === 0) ?  'odd' : 'even';
 
   return (
