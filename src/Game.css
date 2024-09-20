@@ -27,12 +27,13 @@ body {
     height: 60px;
     width: 300px;
     margin-left: -150px;
+    text-align: center;
 }
 
 .header-text {
     font-size: 30px;
     font-weight: bold;
-    width: 200px;
+    width: 220px;
     margin: 0;
     position: absolute;
     top: 50%;
