@@ -1,9 +1,10 @@
 import React from 'react'
 
-const GameFooter = ({onclickEvent}) => {
+const GameFooter = ({onNewGameClick, onSuggestClick}) => {
   return (
     <div className='panel footer'>
-      <button onClick={onclickEvent}>New Game</button>
+      <button onClick={onNewGameClick}>New Game</button>
+      <button onClick={onSuggestClick}>Suggest</button>
     </div>
   )
 }
