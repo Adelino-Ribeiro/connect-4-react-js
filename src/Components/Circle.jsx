@@ -1,7 +1,7 @@
 import React from "react";
 import "../Game.css";
 
-const GameCircle = ({ id, children, onCircleClicked, className }) => {
+const Circle = ({ id, children, onCircleClicked, className }) => {
   // const color = (id % 2 === 0) ?  'odd' : 'even';
 
   return (
@@ -14,4 +14,4 @@ const GameCircle = ({ id, children, onCircleClicked, className }) => {
   );
 };
 
-export default GameCircle;
+export default Circle;

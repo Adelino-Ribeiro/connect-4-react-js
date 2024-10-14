@@ -1,7 +1,7 @@
 import React from "react";
-import { GAME_STATE_DRAW, GAME_STATE_PLAYING, GAME_STATE_WIN } from "../Components/Constants";
+import { GAME_STATE_DRAW, GAME_STATE_PLAYING, GAME_STATE_WIN } from "./Constants";
 
-const GameHeader = ({ gameState, currentPlayer, winPlayer }) => {
+const Header = ({ gameState, currentPlayer, winPlayer }) => {
   const renderLabel = () => {
     switch (gameState) {
       case GAME_STATE_PLAYING:
@@ -21,4 +21,4 @@ const GameHeader = ({ gameState, currentPlayer, winPlayer }) => {
   );
 };
 
-export default GameHeader;
+export default Header;

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import GameCircle from "./GameCircle";
+import Circle from "./Circle";
 import "../Game.css";
-import GameHeader from "./GameHeader";
-import GameFooter from "./GameFooter";
+import Header from "./Header";
+import Footer from "./Footer";
 import { isDraw, isWinner, getComputerMove } from "../Helper";
 import {
   NO_CIRCLES,
@@ -26,22 +26,19 @@ const GameBoard = () => {
   console.log(gameBoard);
 
   useEffect(() => {
-
     initGame();
-
   }, []);
 
   const initGame = () => {
+    console.log("init game");
 
-    console.log('init game');
-
-    setGameBoard(Array(16).fill(NO_PLAYER));
+    setGameBoard(Array(NO_CIRCLES).fill(NO_PLAYER));
 
     setCurrentPlayer(PLAYER_1);
 
     setGameState(GAME_STATE_PLAYING);
-
-  }
+    
+  };
 
   const initBoard = () => {
     const circles = [];
@@ -54,10 +51,8 @@ const GameBoard = () => {
   };
 
   const suggestMove = () => {
-    
     circleClicked(getComputerMove(gameBoard));
-
-  }
+  };
 
   const circleClicked = (id) => {
     console.log("circle clicked: " + id);
@@ -91,7 +86,7 @@ const GameBoard = () => {
 
   const renderCircle = (id) => {
     return (
-      <GameCircle
+      <Circle
         key={id}
         id={id}
         className={`player-${gameBoard[id]}`}
@@ -102,13 +97,17 @@ const GameBoard = () => {
 
   return (
     <>
-      <GameHeader
+      <Header
         gameState={gameState}
         currentPlayer={currentPlayer}
         winPlayer={winPlayer}
       />
       <div className="gameBoard">{initBoard()}</div>
-      <GameFooter onNewGameClick={initGame} onSuggestClick={suggestMove} />
+      <Footer
+        onNewGameClick={initGame}
+        onSuggestClick={suggestMove}
+        gameSate={gameState}
+      />
     </>
   );
 };
